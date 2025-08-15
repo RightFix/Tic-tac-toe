@@ -1,0 +1,161 @@
+MDFloatLayout:
+    orientation: "vertical"
+    padding: 20
+    
+    MDDropDownItem:
+        text: "Beginner"
+        pos_hint: {"center_x": 0.15, "center_y": 0.95}
+    MDSwitch:
+        pos_hint: {"center_x": 0.85, "center_y": 0.95}
+        icon_active : "moon-first-quarter"
+        icon_inactive: "sun-clock"
+        track_color_inactive : "orange"
+        thumb_color_inactive : "orange"
+        on_active:
+            app.theme_cls.theme_style= "Dark" if app.theme_cls.theme_style == "Light" else "Light"
+  
+    MDLabel:
+        text: "Tic Tac Toe"
+        halign: "center"
+        pos_hint: {"center_x": 0.5, "center_y": 0.85}
+        font_size: 50
+        bold: True
+        size_hint_y: .1
+    
+    MDGridLayout:
+        rows: 3
+        pos_hint: {"center_x": 0.5, "center_y": 0.45}
+        spacing: 10
+        padding: 10
+        size_hint_y: .6
+        
+        MDRaisedButton:
+            id: box_1
+            font_size: 50
+            size_hint: .1,.1
+            on_press:
+                box_1.disabled = True
+                box_1.text = "X" if app.x is True else "O"
+                app.x = False if app.x is True else True
+                result.text = app.re.sub(r"1", box_1.text, result.text)
+            text: "" if owin.text == "O Wins" or xwin.text == "X Wins" else box_1.text
+                
+        MDRaisedButton:
+            id: box_2
+            font_size: 50
+            size_hint: .1,.1
+            on_press:
+                box_2.disabled = True
+                box_2.text = "X" if app.x is True else "O"
+                app.x = False if app.x is True else True
+                result.text = app.re.sub(r"2", box_2.text, result.text)
+            text: "" if owin.text == "O Wins" or xwin.text == "X Wins" else box_2.text 
+        MDRaisedButton:
+            id: box_3
+            font_size: 50
+            size_hint: .1,.1
+            on_press:
+                box_3.disabled = True
+                box_3.text = "X" if app.x is True else "O"
+                app.x = False if app.x is True else True
+                result.text= app.re.sub(r"3", box_3.text, result.text)
+            text: "" if owin.text == "O Wins" or xwin.text == "X Wins" else box_3.text  
+            
+        MDRaisedButton:
+            id: box_4
+            font_size: 50
+            size_hint: .1,.1
+            on_press:
+                box_4.disabled = True
+                box_4.text = "X" if app.x is True else "O"
+                app.x = False if app.x is True else True
+                result.text = app.re.sub(r"4", box_4.text, result.text)
+                
+            text: "" if owin.text == "O Wins" or xwin.text == "X Wins" else box_4.text
+                
+        MDRaisedButton:
+            id: box_5
+            font_size: 50
+            size_hint: .1,.1
+            on_press:
+                box_5.disabled = True
+                box_5.text = "X" if app.x is True else "O"
+                app.x = False if app.x is True else True
+                result.text = app.re.sub(r"5", box_5.text, result.text)
+            text: "" if owin.text == "O Wins" or xwin.text == "X Wins" else box_5.text
+                
+        MDRaisedButton:
+            id: box_6
+            font_size: 50
+            size_hint: .1,.1
+            on_press:
+                box_6.disabled = True
+                box_6.text = "X" if app.x is True else "O"
+                app.x = False if app.x is True else True
+                result.text = app.re.sub(r"6", box_6.text, result.text)
+            text: "" if owin.text == "O Wins" or xwin.text == "X Wins" else box_6.text
+                
+        MDRaisedButton:
+            id: box_7
+            font_size: 50
+            size_hint: .1,.1
+            on_press:
+                box_7.disabled = True
+                box_7.text = "X" if app.x is True else "O"
+                app.x = False if app.x is True else True
+                result.text = app.re.sub(r"7", box_7.text, result.text)
+            text: "" if owin.text == "O Wins" or xwin.text == "X Wins" else box_7.text  
+        MDRaisedButton:
+            id: box_8
+            font_size: 50
+            size_hint: .1,.1
+            on_press:
+                box_8.disabled = True
+                box_8.text = "X" if app.x is True else "O"
+                app.x = False if app.x is True else True
+                result.text = app.re.sub(r"8", box_8.text, result.text)
+            text: "" if owin.text == "O Wins" or xwin.text == "X Wins" else box_8.text    
+            
+        MDRaisedButton:
+            id: box_9
+            font_size: 50
+            size_hint: .1,.1
+            on_press:
+                box_9.disabled = True
+                box_9.text = "X" if app.x is True else "O"
+                app.x = False if app.x is True else True
+                result.text = app.re.sub(r"9",box_9.text, result.text)
+            text: "" if owin.text == "O Wins" or xwin.text == "X Wins" else box_9.text   
+    MDRaisedButton
+        text: "Reset"
+        pos_hint: {"center_x":0.5, "center_y": 0.05}
+        size_hint: .1, .02
+        on_press:
+            box_1.text = box_2.text = box_3.text=  box_4.text = box_5.text= box_6.text= box_7.text = box_8.text = box_9.text = ""
+            box_1.disabled = box_2.disabled = box_3.disabled=  box_4.disabled = box_5.disabled= box_6.disabled= box_7.disabled = box_8.disabled = box_9.disabled = False
+            app.x = True
+            result.text = "123456789"
+            
+    MDLabel:
+        id : result
+        #pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        #halign: "center"
+        font_size: 1
+        text: "123456789"
+    
+    MDLabel:
+        id : xwin
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        halign: "center"
+        font_size: 50
+        text: "X Wins" if app.re.match(r"XXX......", result.text) or app.re.match(r"...XXX...", result.text) or app.re.match(r"......XXX", result.text) or app.re.match(r"X...X...X", result.text)or app.re.match(r"X..X..X..", result.text) or app.re.match(r".X..X..X.", result.text) or app.re.match(r"..X..X..X", result.text) else ""
+       
+    MDLabel:
+        id : owin
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        halign: "center"
+        font_size: 50
+        text: "O Wins" if app.re.match(r"OOO......", result.text) or app.re.match(r"...OOO...", result.text) or app.re.match(r"......OOO", result.text) or app.re.match(r"O...O...O", result.text)or app.re.match(r"O..O..O..", result.text) or app.re.match(r".O..O..O.", result.text) or app.re.match(r"..O..O..O", result.text) else ""
+       
+    MDLabel:
+        id : draw 
