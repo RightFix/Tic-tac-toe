@@ -4,7 +4,7 @@
 title = Tic-tac-toe
 
 # (str) Package name
-package.name = TicTacToe
+package.name = tictactoe
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.rightfix
