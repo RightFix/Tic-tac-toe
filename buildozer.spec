@@ -1,10 +1,10 @@
  [app]
 
 # (str) Title of your application
-title = Dice
+title = Tic-tac-toe
 
 # (str) Package name
-package.name = dice
+package.name = TicTacToe
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.rightfix
@@ -81,7 +81,7 @@ fullscreen = 0
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-android.presplash_color = white
+android.presplash_color = #FFA500
 
 # (string) Presplash animation using Lottie format.
 # see https://lottiefiles.com/ for examples and https://airbnb.design/lottie/
