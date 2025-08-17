@@ -4,7 +4,7 @@
 title = Tic-tac-toe
 
 # (str) Package name
-package.name = Tic-tac-toe
+package.name = tic-tac-toe
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.righfix
@@ -14,7 +14,7 @@ source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas
-p
+
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
 
