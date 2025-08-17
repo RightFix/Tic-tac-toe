@@ -136,4 +136,4 @@ jobs:
           path: |
             bin/*.apk
             bin/*.aab
-          retention-days: 33
+          retention-days: 3
