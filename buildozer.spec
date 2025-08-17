@@ -1,13 +1,13 @@
-[app]
+ [app]
 
 # (str) Title of your application
-title = Tic-tac-toe
+title = Dice
 
 # (str) Package name
-package.name = tic-tac-toe
+package.name = dice
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.righfix
+package.domain = org.rightfix
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -16,7 +16,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 
 # (list) List of inclusions using pattern matching
-#source.include_patterns = assets/*,images/*.png
+#source.include_patterns = assets/*
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,https://github.com/kivymd/KivyMD/archive/master.zip,re
+requirements = python3,kivy,kivymd
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -449,4 +449,4 @@ warn_on_root = 1
 #
 #    Then, invoke the command line with the "demo" profile:
 #
-#buildozer --profile demo android debug
+#buildozer --profile demo android debug_artifact
