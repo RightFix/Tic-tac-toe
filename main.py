@@ -1,6 +1,5 @@
 import re
 from kivymd.app import MDApp
-from assets.backend import result
 
 class MainApp(MDApp):
     def build(self):
